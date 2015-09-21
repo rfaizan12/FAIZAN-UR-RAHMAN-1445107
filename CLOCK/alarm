@@ -1,16 +1,21 @@
 
+
 public class AlarmClock extends Clock{
 
     private boolean alarmOn;
-    private int hrSet, minSet;
+    private int hours, mins;
     public AlarmClock( ) {alarmOn = false;}  //the alarm is not set initially
-    public void setAlarm(int hr, int min) {
-	hrSet = hr; minSet = min; alarmOn = true;
+    public void setAlarm(int hr, int min) 
+    {
+	hours = hr; mins = min; alarmOn = true;
    }
-    public void tick( ) {
+    public void tick( )
+    {
 	super.tick( );
-	if ((viewHr( ) == hrSet)&&(viewMin() == minSet)&&alarmOn){
-		System.out.println(“ring, ring, ring”);
+	if ((viewhr()== hours)&&(viewmin() == mins)&&alarmOn)
+	{
+		System.out.println("ring, ring, ring");
+	}
     }
     public void resetAlarm( )  {alarmOn = false;}
 

@@ -1,5 +1,5 @@
-
-public class Clock {
+public class Clock
+{
 
 	private Counter  hours, mins, secs;
     public Clock( ){
@@ -15,7 +15,17 @@ public class Clock {
 		hours.increment( );
 	}
 	
+}
+    public int viewhr( )
+	{
+    	return hours.viewCount();
 	}
+    
+    public int viewmin( )
+	{
+    	return mins.viewCount();
+	}
+    
     public void ShowTime()
 	{
 		System.out.println(hours.viewCount()+":"+mins.viewCount()+":"+secs.viewCount());
